@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+$primaryColor: #5ae24b;
+$secondaryColor: #f7f6f6;
+
+$redMainColor: #f31c1c;
+$blueMainColor: #6edff5;
+$greenMainColor: #41ee55;
+$backgroundInput: rgba(191, 191, 191, 0.514);
+$backgroundOutSiteColor: #65616195;
+$borderInputColor: rgb(140, 140, 134);
+$backgroundInputColor: #c5bbbb64;
+$test: #faf9f9;
+
+$largeFz: 40px;
+$mediumFz: 30px;
+$normalFz: 24px;
+$smallFz: 18px;
+$headerFz: 30px;
+$inputHeight: 40px;
+
+:root {
+  --primaryColor: #{$primaryColor};
+  --secondaryColor: #{$secondaryColor};
+  --backgroundInputColor: #{$backgroundInputColor};
+
+  --largeFz: #{$largeFz};
+  --mediumFz: #{$mediumFz};
+  --normalFz: #{$normalFz};
+  --smallFz: #{$smallFz};
+  --headerFz: #{$headerFz};
+
+  --redMainColor: #{$redMainColor};
+  --blueMainColor: #{$blueMainColor};
+  --greenMainColor: #{$greenMainColor};
+  --borderInputColor: #{$borderInputColor};
+  --backgroundOutSiteColor: #{$backgroundOutSiteColor};
+  --backgroundInput: #{$backgroundInput};
+  --inputHeight: #{$inputHeight};
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: var(--normalFz);
+}

@@ -1,0 +1,39 @@
+.cartItemContainer {
+  border: 0.2px solid black;
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+
+  //   justify-content: center;
+  align-items: center;
+  .cartItemImage {
+    // height: 30px;
+    // width: 30px;
+    > img {
+      height: 106px;
+      width: 100px;
+    }
+  }
+  .cartItemInfo {
+    margin: 12px;
+    flex: 1;
+    .cartItemField {
+      margin: 8px;
+    }
+  }
+  .cartItemAction {
+    display: flex;
+    margin: 0 24px;
+    justify-content: center;
+    align-items: center;
+    .cartItemControlNumber {
+      margin: 0 8px;
+    }
+    .cartItemDelete {
+      cursor: pointer;
+      margin: 0 8px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

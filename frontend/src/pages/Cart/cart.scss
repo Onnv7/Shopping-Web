@@ -1,0 +1,37 @@
+.cartContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .cartWrap {
+    width: 70%;
+
+    .cartHeader {
+      margin: 24px 0px;
+      font-size: 40px;
+      font-weight: 900;
+    }
+    .cartBody {
+      display: flex;
+      .cartItemList {
+        padding: 0;
+        margin: 8px;
+        flex: 7;
+        .cartItem {
+          margin: 6px 0;
+          list-style-type: none;
+        }
+      }
+      .cartBill {
+        margin: 8px;
+        flex: 5;
+
+        .cartBillOrderButton {
+          margin: 24px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

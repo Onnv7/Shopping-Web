@@ -1,0 +1,27 @@
+.homeContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  .homeCategoryPanel {
+    flex: 2;
+  }
+  .homeProductPanel {
+    flex: 9;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    .homeProductList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-content: start;
+      width: 70%;
+      .homeProductCard {
+        cursor: pointer;
+        width: fit-content;
+        margin: 16px;
+      }
+    }
+  }
+}

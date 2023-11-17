@@ -1,0 +1,28 @@
+.sidebarContainer {
+  height: 70px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  .sidebarCategory {
+    display: flex;
+    .sidebarHomeItem {
+      display: flex;
+      align-items: center;
+      margin: 0 24px;
+      height: 100%;
+    }
+  }
+  .sidebarIconOptions {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 0 12px;
+    .sidebarIcon {
+      margin: 0 12px;
+      cursor: pointer;
+      height: 32px;
+      width: 32px;
+    }
+  }
+}

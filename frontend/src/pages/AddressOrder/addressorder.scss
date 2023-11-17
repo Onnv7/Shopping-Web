@@ -1,0 +1,58 @@
+.addressOrderContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .addressOrderHeader {
+    align-self: center;
+    font-size: 32px;
+    width: 80%;
+  }
+  .addressOrderWrap {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+    .addressOrderInfo {
+      width: 100%;
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+      .addressOrderForm {
+        margin-right: 30px;
+        box-sizing: border-box;
+        padding: 24px;
+        border-radius: 12px;
+        width: 100%;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        .addressOrderField {
+          display: flex;
+          margin: 42px 8px;
+          font-size: 20px;
+          .addressOrderTitle {
+            width: 200px;
+            margin: 0 12px;
+          }
+          .addressOrderInput {
+            width: 100%;
+          }
+        }
+        .addressOrderFieldPhoneNumber {
+          .addressOrderPhoneNumber {
+          }
+        }
+      }
+      .addressOrderButtons {
+        margin: 12px 0;
+        display: inline-flex;
+        align-self: flex-end;
+      }
+    }
+    .addressOrderBill {
+      margin: 0 24px;
+      box-sizing: border-box;
+      flex: 3;
+    }
+  }
+}

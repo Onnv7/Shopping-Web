@@ -1,0 +1,31 @@
+.productCardContainer {
+  height: 300px;
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+
+  .productCardImage {
+    > img {
+      width: 100%;
+      height: 200px;
+      user-select: none;
+    }
+  }
+  .productCardInfo {
+    display: flex;
+    overflow: hidden;
+    padding: 0 12px;
+    margin: 12px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .productCardName {
+      font-size: 20px;
+    }
+    .productCardPrice {
+      margin: 12px 0;
+      font-weight: bold;
+    }
+  }
+}

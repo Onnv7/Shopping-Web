@@ -1,0 +1,61 @@
+.signInContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .signInCard {
+    width: 100%;
+    margin: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.3);
+
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    .signInBackground {
+      flex: 2;
+      width: 100%;
+      height: 100%;
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .signInFormWrap {
+      margin: 0 24px;
+      flex: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .signInForm {
+        width: 50%;
+        .signInTitle {
+          font-size: 36px;
+          width: fit-content;
+          margin: 12px auto;
+        }
+        .signInField {
+          margin-bottom: 20px;
+          .signInFieldKey {
+            font-size: 24px;
+            margin-bottom: 8px;
+          }
+          .signInFieldValue {
+          }
+        }
+        .signInSubmitButton {
+          width: fit-content;
+          margin: 0 auto;
+          margin-top: 48px;
+        }
+        .signInTextLogin {
+          font-size: 18px;
+          width: fit-content;
+          margin: 24px auto;
+        }
+      }
+    }
+  }
+}

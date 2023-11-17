@@ -1,0 +1,20 @@
+.outLineButtonContainer {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 12px 16px;
+  font-size: var(--normalFz);
+  cursor: pointer;
+  box-sizing: border-box;
+  .contentOutLineButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+.tes {
+  background-color: #f2412623;
+}

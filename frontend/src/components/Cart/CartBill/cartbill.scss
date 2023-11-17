@@ -1,0 +1,36 @@
+.cartBillContainer {
+  padding: 30px 60px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  .cartBillTitle {
+    margin: 12px 0px 30px 0px;
+  }
+  .cartBillContent {
+    .cartBillItem {
+      margin: 6px;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .cartBillContentName {
+        font-size: 20px;
+        color: #333;
+        font-weight: 500;
+      }
+      .cartBillContentPrice {
+        font-style: italic;
+      }
+    }
+  }
+  .cartBillTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .cartBillTotalTitle {
+      font-weight: bold;
+    }
+    .cartBillTotalPrice {
+      font-style: italic;
+      font-weight: 900;
+    }
+  }
+}

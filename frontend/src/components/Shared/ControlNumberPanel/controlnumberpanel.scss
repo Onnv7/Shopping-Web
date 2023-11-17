@@ -1,0 +1,31 @@
+.controlNumberContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 0.2px solid black;
+  user-select: none;
+  .controlNumberDecrease {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    width: 32px;
+    background-color: rgb(104, 99, 99);
+  }
+  .controlNumberValue {
+  }
+  .controlNumberIncrease {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    width: 32px;
+    background-color: rgb(104, 99, 99);
+  }
+}
