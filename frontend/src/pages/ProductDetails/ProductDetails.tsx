@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./productdetails.scss";
 import OutLineButton from "../../components/Shared/OutlineButton/OutLineButton";
 import ElevatedButton from "../../components/Shared/ElevatedButton/ElevatedButton";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useAppDispatch } from "../../services/redux/useTypedSelector";
 import { useSelector } from "react-redux";
 import { productSelector } from "../../services/redux/selecters/selector";
@@ -12,9 +12,12 @@ import ControlNumberPanel from "../../components/Shared/ControlNumberPanel/Contr
 import { storageManager } from "../../helper/storager";
 import { ICartItem } from "../../interface/models/cart.model";
 import { toaster } from "../../helper/toaster";
+import { getItemsCart } from "../../services/redux/slices/cart.slice";
 
 const ProductDetails: React.FC = () => {
   const { productId } = useParams();
+
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const productPayload = useSelector(productSelector);
   const [product, setProduct] = useState<IProductDetails>();
@@ -35,6 +38,17 @@ const ProductDetails: React.FC = () => {
         quantity: product?.quantity,
       } as ICartItem);
       toaster.success({ text: "Add to cart successfully" });
+    }
+  };
+
+  const handlePayNow = () => {
+    if (product) {
+      storageManager.pushItemToCart({
+        id: product?.id,
+        quantity: product?.quantity,
+      } as ICartItem);
+      dispatch(getItemsCart());
+      navigate("/delivering");
     }
   };
 
@@ -61,7 +75,7 @@ const ProductDetails: React.FC = () => {
                 setProduct((prev) => {
                   return {
                     ...prev,
-                    quantity: value === 0 ? 0 : value - 1,
+                    quantity: value === 1 ? 1 : value - 1,
                   } as IProductDetails;
                 });
               }}
@@ -76,7 +90,11 @@ const ProductDetails: React.FC = () => {
             />
             <div className="productDetailsAction">
               <div className="productDetailBuyNowButton productDetailsActionButton">
-                <OutLineButton color="black" text="Buy now" />
+                <OutLineButton
+                  color="black"
+                  text="Buy now"
+                  onClick={handlePayNow}
+                />
               </div>
               <div className="productDetailAddToCartButton productDetailsActionButton">
                 <ElevatedButton
