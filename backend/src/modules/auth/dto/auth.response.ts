@@ -11,5 +11,5 @@ export class SignInResponse {
   @Expose()
   userId: string;
   @Expose()
-  accessToken: string;
+  token: string;
 }

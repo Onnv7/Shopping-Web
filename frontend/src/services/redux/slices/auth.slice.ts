@@ -10,6 +10,7 @@ import {
 } from "../../../interface/requests/auth.request";
 import { AuthApi } from "../../apis/auth.api";
 import { ILoginResponse } from "../../../interface/response/auth.response";
+import { AxiosError } from "axios";
 
 export type AuthPayload = {
   loading: boolean;
@@ -43,6 +44,9 @@ export const register = createAsyncThunk(
       const data: ILoginResponse = response.data;
       return data;
     } catch (error: unknown) {
+      if (error instanceof AxiosError) {
+        return thunkAPI.rejectWithValue(error.response?.data.message);
+      }
       return thunkAPI.rejectWithValue("Register failed");
     }
   }
@@ -95,8 +99,10 @@ const authSlice = createSlice({
         state.loading = false;
         state.succeed = false;
         state.notification = {
-          type: NotificationConstant.SUCCESS,
-          message: "Login failed",
+          type: NotificationConstant.ERROR,
+          message: action.payload
+            ? action.payload!.toString()
+            : "Register failed",
         };
       });
   },

@@ -38,9 +38,9 @@ export class AuthService {
       password: hashPassword,
     } as User);
 
-    const accessToken = this.jwtService.sign({ id: data._id });
+    const token = this.jwtService.sign({ id: data._id });
     const responseData = {
-      accessToken,
+      token,
       userId: data._id.toString(),
     } as SignInResponse;
 

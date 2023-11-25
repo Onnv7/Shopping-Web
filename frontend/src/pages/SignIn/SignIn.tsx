@@ -123,6 +123,7 @@ const SignIn: React.FC = () => {
               <div className="signInFieldValue">
                 <TextInput
                   height="40px"
+                  type="password"
                   placeHolderText="Enter password"
                   inputStyle={{ fontSize: 20 }}
                   value={registerItem.password}
